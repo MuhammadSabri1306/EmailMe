@@ -1,29 +1,25 @@
 {
-  "name": "emailme",
-  "version": "1.0.0",
-  "description": "\"# EmailMe\"",
-  "main": "index.js",
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MuhammadSabri1306/EmailMe.git"
+  "engines": {
+    "node": "16"
   },
-  "keywords": [
-    "email",
-    "firebase",
-    "gmail"
-  ],
-  "author": "Muhammad Sabri",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MuhammadSabri1306/EmailMe/issues"
-  },
-  "homepage": "https://github.com/MuhammadSabri1306/EmailMe#readme",
+  "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",
-    "firebase": "^9.8.4",
-    "nodemailer": "^6.7.5"
-  }
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "nodemailer": "^6.7.6"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
 }
