@@ -55,7 +55,7 @@ function doPost(e) {
 }
 ```
 
-> You also can check the [code-detail.js](/) in this repo for more detail.
+> You also can check the [code-detail.js](https://github.com/MuhammadSabri1306/EmailMe/blob/main/code-detail.js) in this repo for more detail.
 
 ## 2. Deploy your script as a Web App
 
@@ -90,10 +90,10 @@ const emailMe = (formName, handler) => {
 
 emailMe("contact-form", {
     onSuccess: response => {
-        ...
+        // ...
     },
     onError: error => {
-        ...
+        // ...
     }
 });
 </script>
