@@ -1,0 +1,33 @@
+<!-- The Contact Form -->
+<form name="contact-form" method="post">
+    <input type="text" name="name" placeholder="Enter your name" required>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <textarea name="message" placeholder="Type your message here.." required></textarea>
+    <button type="submit">Send</button>
+</form>
+
+<script>
+// Function to send request
+const emailMe = (formName, handler) => {
+    const scriptURL = <SCRIPT URL>
+    const contactForm = document.forms[formName];
+    const { onSuccess, onError } = handler;
+    
+    contactForm.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(contactForm)
+        }).then(onSuccess).catch(onError);
+	});
+};
+
+// Call the function on load
+emailMe("contact-form", {
+    onSuccess: response => {
+        // ...
+    },
+    onError: error => {
+        // ...
+    }
+});
