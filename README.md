@@ -13,7 +13,7 @@
 
 ## 1. Create Apps Script project
 
-First, you need to create new project. You can find the guide [here](https://developers.google.com/apps-script/guides/projects#create_a_project_from_google_drive). Go to Editor, open your Code.gs and enter the script. In code below, the API accept 3 parameter (name, email, message) that request by POST method (doPost()), or you can change it to GET (doGet()). Here is the [referrence](https://developers.google.com/apps-script/guides/triggers?hl=en#dogete_and_doposte).
+First, you need to create new project. You can find the guide [here](https://developers.google.com/apps-script/guides/projects#create_a_project_from_google_drive). Go to Editor, open your Code.gs and enter the script. In code below, the API accept 3 parameters (name, email, message) that request by POST method (doPost()), or you can change it to GET (doGet()). Here is the [referrence](https://developers.google.com/apps-script/guides/triggers?hl=en#dogete_and_doposte).
 
 ```js
 function emailMe(name, email, message){
@@ -63,7 +63,7 @@ Read the deployment guide [here](https://developers.google.com/apps-script/guide
 
 ## 3. Create HTML Form and JS script to handle it
 
-Here i try to send 3 parameter (name, email, message) to my Apps Script endpoint. Send your form data to your SCRIPT URL.
+Here i try to send 3 parameters (name, email, message) to my Apps Script endpoint. Send your form data to your SCRIPT URL.
 
 ```html
 <form name="contact-form" method="post">
